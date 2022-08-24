@@ -17,4 +17,4 @@ phases:
       - echo Build completed on `date` !!!
 artifacts:
   files:
-    - target/TestAWSLambda-1.0-SNAPSHOT.jar
+    - TestAWSLambda-1.0-SNAPSHOT.jar
