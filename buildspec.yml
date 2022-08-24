@@ -10,20 +10,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - export BUCKET=my-bucket-for-test
       - mvn package
       - ls
-      - mv target/TestAWSLambda-1.0-SNAPSHOT.jar .
-      - ls
-      - rm -rf target src buildspec.yml pom.xml TestAWSLambda-1.0-SNAPSHOT
-      - ls
-      - echo hi4
-      - aws cloudformation package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
   post_build:
     commands:
       - echo Build completed on `date` !!!
 artifacts:
   files:
     - target/TestAWSLambda-1.0-SNAPSHOT.jar
-    - template.yaml
-    - outputtemplate.yaml
