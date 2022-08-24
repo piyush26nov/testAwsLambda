@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: corretto17
   pre_build:
     commands:
       - echo Test started on `date`
@@ -12,6 +12,7 @@ phases:
       - echo Build started on `date`
       - export BUCKET=my-bucket-for-test
       - mvn package
+      - ls
       - mv target/TestAWSLambda-1.0-SNAPSHOT.jar
       - unzip TestAWSLambda-1.0-SNAPSHOT.jar
       - rm -rf target src buildspec.yml pom.xml TestAWSLambda-1.0-SNAPSHOT
