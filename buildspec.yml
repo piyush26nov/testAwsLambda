@@ -13,7 +13,7 @@ phases:
       - export BUCKET=my-bucket-for-test
       - mvn package
       - ls
-      - mv target/TestAWSLambda-1.0-SNAPSHOT.jar
+      - mv target/TestAWSLambda-1.0-SNAPSHOT.jar .
       - unzip TestAWSLambda-1.0-SNAPSHOT.jar
       - rm -rf target src buildspec.yml pom.xml TestAWSLambda-1.0-SNAPSHOT
       - echo hi4
