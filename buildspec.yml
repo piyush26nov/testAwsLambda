@@ -14,8 +14,9 @@ phases:
       - mvn package
       - ls
       - mv target/TestAWSLambda-1.0-SNAPSHOT.jar .
-      - unzip TestAWSLambda-1.0-SNAPSHOT.jar
+      - ls
       - rm -rf target src buildspec.yml pom.xml TestAWSLambda-1.0-SNAPSHOT
+      - ls
       - echo hi4
       - aws cloudformation package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
   post_build:
