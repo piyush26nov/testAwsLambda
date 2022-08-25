@@ -20,3 +20,4 @@ phases:
 artifacts:
   files:
     - TestAWSLambda-1.0-SNAPSHOT.jar
+    - ec2.yaml
